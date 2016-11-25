@@ -5,9 +5,11 @@ $(document).ready(function(){
     const pre = $(document.createElement('pre'));
     const code = $(document.createElement('code')).text(beautifyCode);
 
+    $('head')
+      .append('<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">');
+
     body
       .empty()
-      .css({ 'font-size': '1.5em' })
       .append(pre.append(code))
 
     hljs.highlightBlock(body.get(0));

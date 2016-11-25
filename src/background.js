@@ -1,6 +1,7 @@
 chrome.browserAction.onClicked.addListener(function(tab) {
   // CSS
   chrome.tabs.insertCSS(null, { file: 'lib/highlight/monokai-sublime.min.css' });
+  chrome.tabs.insertCSS(null, { file: 'src/content_script.css' });
 
   // JS
   chrome.tabs.executeScript(null, { file: 'lib/jquery/jquery.min.js' });
