@@ -1,7 +1,7 @@
 $(document).ready(function(){
   try {
     const body = $('body');
-    const beautifyCode = JSON.stringify(JSON.parse(body.text()), null, 4);
+    const beautifyCode = JSONStringifyPrettyCompact(JSON.parse(body.text()));
     const pre = $(document.createElement('pre'));
     const code = $(document.createElement('code')).text(beautifyCode);
 
