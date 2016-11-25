@@ -1,7 +1,7 @@
 # jsonz
 Make JSON pretty and syntax highlight
 
-![screenshot](https://img.987.tw/0B8cemvXY3r61dmVuOXY3LUlkSWM)
+![screenshot](https://img.987.tw/0B8cemvXY3r61NHdSZEl1VkZSWVU)
 
 ## Chrome Extension
 
