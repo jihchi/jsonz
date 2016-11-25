@@ -3,7 +3,11 @@ Make JSON pretty and syntax highlight
 
 ![screenshot](https://img.987.tw/0B8cemvXY3r61dmVuOXY3LUlkSWM)
 
-# Getting Started
+## Chrome Extension
+
+Download via [Chrome Web Store](https://chrome.google.com/webstore/detail/jsonz/ahendnlfikgofocdohpgaddkfjhbicnc)
+
+## Getting Started
 
 1. `git clone https://github.com/jihchi/jsonz.git`
 1. *(Following instructions are copied from [here](https://developer.chrome.com/extensions/getstarted#unpacked))* Visit `chrome://extension`s in your browser (or open up the Chrome menu by clicking the icon to the far right of the Omnibox The menu's icon is three horizontal bars. and select **Extensions** under the **Tools** menu to get to the same place).
@@ -11,11 +15,11 @@ Make JSON pretty and syntax highlight
 1. Click **Load unpacked extension…** to pop up a file-selection dialog.
 1. Navigate to the directory in which your extension files live, and select it.
 
-# License
+## License
 
 MIT
 
-## lydell/json-stringify-pretty-compact
+### lydell/json-stringify-pretty-compact
 
 This project is using [lydell/json-stringify-pretty-compact](https://github.com/lydell/json-stringify-pretty-compact) instead of original JSON.stringify.
 
