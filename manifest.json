@@ -1,7 +1,7 @@
 {
   "name": "jsonz",
   "description": "Make JSON pretty and syntax highlight",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "permissions": [
     "activeTab"
   ],
