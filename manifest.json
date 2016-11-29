@@ -1,6 +1,6 @@
 {
   "name": "jsonz",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "author": "Archie Lee <achi@987.tw",
   "description": "Make JSON pretty and syntax highlight",
   "homepage_url": "https://github.com/jihchi/jsonz",
