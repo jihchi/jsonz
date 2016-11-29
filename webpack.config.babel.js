@@ -4,7 +4,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 const ROOT = path.resolve(__dirname);
-const bundledPath = path.join(ROOT, 'bundled')
+const bundledPath = path.join(ROOT, 'bundled');
 
 export default {
   entry: {
@@ -28,7 +28,7 @@ export default {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
-    ]
+    ],
   },
   plugins: [
     new CopyWebpackPlugin([
@@ -37,8 +37,8 @@ export default {
     ]),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'commons',
-      chunks: ["inject", "click"]
+      chunks: ['inject', 'click'],
     }),
-    new ExtractTextPlugin('[name].css')
+    new ExtractTextPlugin('[name].css'),
   ],
 };

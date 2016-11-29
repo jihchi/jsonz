@@ -12,7 +12,7 @@ export default function beautify() {
   const code = document.createElement('code');
   let beautifyCode = body.textContent;
 
-  injectCSS('https://fonts.googleapis.com/css?family=Inconsolata')
+  injectCSS('https://fonts.googleapis.com/css?family=Inconsolata');
   injectCSS(chrome.extension.getURL('bundled/commons.css'));
 
   try {
@@ -30,4 +30,4 @@ export default function beautify() {
   } catch (e) {
     debug('failed to highlight syntax. error:', e);
   }
-};
+}

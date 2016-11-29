@@ -12,6 +12,11 @@ class Options extends Component {
       busy: true,
     };
   }
+
+  componentDidMount() {
+    this.loadConfig();
+  }
+
   saveConfig = () => {
     const { whitelist } = this.state;
     const nextWhitelist = _.flow(
@@ -44,28 +49,24 @@ class Options extends Component {
     });
   }
 
-  componentDidMount() {
-    this.loadConfig();
-  }
-
   render() {
     const { busy, whitelist } = this.state;
 
     return (
       <div>
         <h1>jsonz Options</h1>
+        <div>
+          <h4>Whitelist</h4>
+          <div>* = wildcard</div>
           <div>
-            <h4>Whitelist</h4>
-            <div>* = wildcard</div>
-            <div>
-              <textarea
-                style={{ width: '50%', height: 100 }}
-                value={whitelist}
-                onInput={this.linkState('whitelist')}
-                disabled={busy}
-              />
-            </div>
+            <textarea
+              style={{ width: '50%', height: 100 }}
+              value={whitelist}
+              onInput={this.linkState('whitelist')}
+              disabled={busy}
+            />
           </div>
+        </div>
         <div>
           <button disabled={busy} onClick={this.saveConfig}>Save</button>
         </div>
