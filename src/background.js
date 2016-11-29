@@ -4,7 +4,6 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   chrome.tabs.insertCSS(null, { file: 'src/content_script.css' });
 
   // JS
-  chrome.tabs.executeScript(null, { file: 'lib/jquery/jquery.min.js' });
   chrome.tabs.executeScript(null, { file: 'lib/highlight/highlight.min.js' });
   chrome.tabs.executeScript(null, { file: 'lib/json-stringify-pretty-compact/index.js' });
 

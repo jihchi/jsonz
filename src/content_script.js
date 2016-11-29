@@ -2,13 +2,17 @@
 
 var debug = console.log.bind(console, '[jsonz]');
 
-$(document).ready(function(){
-  var body = $('body');
-  var beautifyCode = body.text();
-  var pre = $(document.createElement('pre'));
-  var code = $(document.createElement('code'));
+function beautify(){
+  var body = document.body;
+  var beautifyCode = body.textContent;
+  var pre = document.createElement('pre');
+  var code = document.createElement('code');
+  var link = document.createElement('link');
 
-  $('head').append('<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">');
+  link.setAttribute('href', 'https://fonts.googleapis.com/css?family=Inconsolata');
+  link.setAttribute('rel', 'stylesheet');
+
+  document.head.appendChild(link);
 
   try {
     beautifyCode = JSONStringifyPrettyCompact(JSON.parse(beautifyCode), { indent: 4 });
@@ -17,15 +21,15 @@ $(document).ready(function(){
   }
 
   try {
-    code.text(beautifyCode);
-    
-    body
-      .empty()
-      .append(pre.append(code))
-
-    hljs.highlightBlock(body.get(0));
+    code.textContent = beautifyCode;
+    body.innerHTML = '';
+    pre.appendChild(code);
+    body.appendChild(pre);
+    hljs.highlightBlock(body);
   } catch (e) {
     debug('failed to highlight syntax. error:', e);
   }
-});
+};
+
+beautify();
 
