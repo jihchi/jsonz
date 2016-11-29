@@ -1,4 +1,11 @@
 # jsonz
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ahendnlfikgofocdohpgaddkfjhbicnc.svg)](https://chrome.google.com/webstore/detail/jsonz/ahendnlfikgofocdohpgaddkfjhbicnc)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/price/ahendnlfikgofocdohpgaddkfjhbicnc.svg)](https://chrome.google.com/webstore/detail/jsonz/ahendnlfikgofocdohpgaddkfjhbicnc)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/rating/ahendnlfikgofocdohpgaddkfjhbicnc.svg)](https://chrome.google.com/webstore/detail/jsonz/ahendnlfikgofocdohpgaddkfjhbicnc)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/rating-count/ahendnlfikgofocdohpgaddkfjhbicnc.svg)](https://chrome.google.com/webstore/detail/jsonz/ahendnlfikgofocdohpgaddkfjhbicnc)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/ahendnlfikgofocdohpgaddkfjhbicnc.svg)](https://chrome.google.com/webstore/detail/jsonz/ahendnlfikgofocdohpgaddkfjhbicnc)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/d/ahendnlfikgofocdohpgaddkfjhbicnc.svg)](https://chrome.google.com/webstore/detail/jsonz/ahendnlfikgofocdohpgaddkfjhbicnc)
+
 Make JSON pretty and syntax highlight
 
 ![screenshot](https://img.987.tw/0B8cemvXY3r61NHdSZEl1VkZSWVU)
