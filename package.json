@@ -30,6 +30,7 @@
   "homepage": "https://github.com/jihchi/jsonz#readme",
   "dependencies": {
     "highlight.js": "^9.8.0",
+    "jquery": "^3.1.1",
     "json-stringify-pretty-compact": "^1.0.2",
     "lodash": "^4.17.2",
     "preact": "^6.4.0",

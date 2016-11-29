@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import _ from 'lodash/fp';
 import { match } from 'wildstring';
 import beautify from './common/beautify';
@@ -18,4 +19,4 @@ function onLoad() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', onLoad, false);
+$(document).ready(onLoad);
