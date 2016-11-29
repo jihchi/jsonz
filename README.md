@@ -19,7 +19,3 @@ Download via [Chrome Web Store](https://chrome.google.com/webstore/detail/jsonz/
 
 MIT
 
-### lydell/json-stringify-pretty-compact
-
-This project is using [lydell/json-stringify-pretty-compact](https://github.com/lydell/json-stringify-pretty-compact) instead of original JSON.stringify.
-
