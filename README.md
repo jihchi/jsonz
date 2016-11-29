@@ -15,6 +15,16 @@ Download via [Chrome Web Store](https://chrome.google.com/webstore/detail/jsonz/
 1. Click **Load unpacked extension…** to pop up a file-selection dialog.
 1. Navigate to the directory in which your extension files live, and select it.
 
+## Change Log
+
+### 2.0.0 - 2016-11-29
+
+* **[Added]** Add supports for `whitelist` option.
+
+### 1.2.1 - 2016-11-25
+
+* **[Added]** Initial version: Add supports for `click-and-beautify` feature.
+
 ## License
 
 MIT
