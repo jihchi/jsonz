@@ -7,10 +7,9 @@ body * {
   font-family: 'Inconsolata', monospace !important;
 }
 
-
 body.hljs .hljs-string:hover,
 body.hljs .hljs-attr:hover,
-body.hljs .hljs-number:hover,
+body.hljs .hljs-number:hover
 {
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -20,7 +19,9 @@ body.hljs .hljs-string:hover {
   border: 1px solid #e6db74;
 }
 
-body.hljs .hljs-attr:hover {
+body.hljs .hljs-attr:hover,
+body.hljs .hljs-attr.hovering
+{
   border: 1px solid #f92672;
 }
 

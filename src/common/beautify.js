@@ -7,6 +7,18 @@ import injectCSS from './injectCSS';
 import 'highlight.js/styles/monokai-sublime.css';
 import './beautify.css';
 
+function onMouseEnter() {
+  const attr = $(this).prev('.hljs-attr');
+
+  attr.addClass('hovering');
+}
+
+function onMouseLeave() {
+  const attr = $(this).prev('.hljs-attr');
+
+  attr.removeClass('hovering');
+}
+
 export default function beautify() {
   const body = $('body');
   const pre = $(document.createElement('pre'));
@@ -33,4 +45,8 @@ export default function beautify() {
   } catch (e) {
     debug('failed to highlight syntax. error:', e);
   }
+
+  $('.hljs-string, .hljs-number')
+    .on('mouseenter', onMouseEnter)
+    .on('mouseleave', onMouseLeave);
 }
