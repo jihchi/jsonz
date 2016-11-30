@@ -46,7 +46,7 @@ export default function beautify() {
     debug('failed to highlight syntax. error:', e);
   }
 
-  $('.hljs-string, .hljs-number')
+  $('.hljs-string, .hljs-number, .hljs-literal')
     .on('mouseenter', onMouseEnter)
     .on('mouseleave', onMouseLeave);
 }
