@@ -3,3 +3,4 @@ temp
 .tmp
 .DS_Store
 bundled
+*.zip

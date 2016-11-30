@@ -4,11 +4,11 @@
   "description": "Make JSON pretty and syntax highlight",
   "main": "index.js",
   "scripts": {
-    "pack": "zip -rv9 packed.zip manifest.json bundledls",
+    "pack": "zip -rv9 packed.zip manifest.json bundled",
     "precompile": "rm -rf bundled",
     "compile": "webpack --progress",
-    "dist": "npm run compile -- -p",
-    "start": "npm run compile -- --watch",
+    "dist": "yarn run compile -- -p && yarn run pack",
+    "start": "yarn run compile -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
