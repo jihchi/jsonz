@@ -24,6 +24,11 @@ Download via [Chrome Web Store](https://chrome.google.com/webstore/detail/jsonz/
 
 ## Change Log
 
+### 2.1.0 - 2016-11-30
+
+* **[Added]** Add hovering style.
+* **[Added]** Select the text when user click on key or value element
+
 ### 2.0.0 - 2016-11-29
 
 * **[Added]** Add supports for `whitelist` option.
