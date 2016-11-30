@@ -4,3 +4,4 @@ temp
 .DS_Store
 bundled
 *.zip
+*.log
