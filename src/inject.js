@@ -1,14 +1,15 @@
 import $ from 'jquery';
-import _ from 'lodash/fp';
+import some from 'lodash/fp/some';
+import getOr from 'lodash/fp/getOr';
 import { match } from 'wildstring';
 import beautify from './common/beautify';
 
 function isMatched(needle, haystack) {
-  return _.some(rule => match(rule, needle))(haystack);
+  return some(rule => match(rule, needle))(haystack);
 }
 
 function onLoad() {
-  const href = _.getOr('')('location.href')(document);
+  const href = getOr('')('location.href')(document);
 
   chrome.storage.sync.get({ whitelist: [] }, ({ whitelist }) => {
     if (!isMatched(href, whitelist)) {
