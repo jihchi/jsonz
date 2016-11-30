@@ -18,18 +18,15 @@ body.hljs .hljs-literal:hover
 }
 
 body.hljs .hljs-string:hover {
-  border: 1px solid #e6db74;
 }
 
 body.hljs .hljs-attr.hovering
 {
-  border: 1px solid #f92672;
 }
 
 body.hljs .hljs-number:hover {
-  border: 1px solid #ae81ff;
 }
 
 body.hljs .hljs-literal:hover {
-  border: 1px solid #ae81ff;
 }
+
