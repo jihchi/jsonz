@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import hljs from 'highlight.js';
+import select from 'select';
 import stringify from 'json-stringify-pretty-compact';
 import debug from './debug';
 import injectCSS from './injectCSS';
@@ -17,6 +18,10 @@ function onMouseLeave() {
   const attr = $(this).prev('.hljs-attr');
 
   attr.removeClass('hovering');
+}
+
+function onClick() {
+  select(this);
 }
 
 export default function beautify() {
@@ -48,5 +53,9 @@ export default function beautify() {
 
   $('.hljs-string, .hljs-number, .hljs-literal')
     .on('mouseenter', onMouseEnter)
-    .on('mouseleave', onMouseLeave);
+    .on('mouseleave', onMouseLeave)
+    .on('click', onClick);
+
+  $('.hljs-attr')
+    .on('click', onClick);
 }

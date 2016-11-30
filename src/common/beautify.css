@@ -12,15 +12,15 @@ body.hljs .hljs-attr:hover,
 body.hljs .hljs-number:hover,
 body.hljs .hljs-literal:hover
 {
+  transition: border .1s;
   border-radius: 3px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 body.hljs .hljs-string:hover {
   border: 1px solid #e6db74;
 }
 
-body.hljs .hljs-attr:hover,
 body.hljs .hljs-attr.hovering
 {
   border: 1px solid #f92672;
