@@ -4,6 +4,7 @@
   "description": "Make JSON pretty and syntax highlight",
   "main": "index.js",
   "scripts": {
+    "build": "rollup -c -w",
     "pack": "zip -rv9 packed.zip manifest.json bundled",
     "precompile": "rm -rf bundled",
     "compile": "webpack --progress",
@@ -47,6 +48,11 @@
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "rollup": "^0.36.4",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-svelte": "^1.0.0",
+    "rollup-watch": "^2.5.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.3"
   }

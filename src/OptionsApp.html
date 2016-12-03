@@ -1,0 +1,98 @@
+<div>
+  <h1>jsonz Options</h1>
+  <div>
+    <h4>Whitelist</h4>
+    <div>One URL per line. URL should starts with `http`. wildcard(*) is available.</div>
+    <div>For example: `https://raw.githubusercontent.com/*.json`</div>
+    <div>
+      <textarea
+        on:change="onWhitelistChange(event.target.value)"
+        disabled="{{busy}}"
+      >{{whitelistText}}</textarea>
+    </div>
+  </div>
+  <div>
+    <button disabled="{{busy}}" on:click="saveConfig()">
+      Save
+    </button>
+    {{#if busy}}
+      <span class="processing">Processing...</span>
+    {{/if}}
+  </div>
+</div>
+
+<style>
+  textarea {
+    width: 50%;
+    height: 100px;
+  }
+
+  .processing {
+    color: red;
+  }
+</style>
+
+<script>
+  import flow from 'lodash/fp/flow';
+  import split from 'lodash/fp/split';
+  import join from 'lodash/fp/join';
+  import map from 'lodash/fp/map';
+  import trim from 'lodash/fp/trim';
+  import reject from 'lodash/fp/reject';
+  import isEmpty from 'lodash/fp/isEmpty';
+  import filter from 'lodash/fp/filter';
+  import startsWith from 'lodash/fp/startsWith';
+
+  const splitByLine = split('\n');
+  const joinByLine = join('\n');
+
+  export default {
+    computed: {
+      whitelistText: whitelist => joinByLine(whitelist),
+    },
+    data() {
+      return {
+        whitelist: [],
+        busy: true,
+      };
+    },
+    onrender() {
+      this.loadConfig();
+    },
+    methods: {
+      onWhitelistChange(value) {
+        this.set({ whitelist: splitByLine(value) });
+      },
+      loadConfig() {
+        this.set({ busy: true });
+
+        chrome.storage.sync.get({
+          whitelist: [],
+        }, (value) => {
+          this.set({
+            whitelist: value.whitelist,
+            busy: false,
+          });
+        });
+      },
+      saveConfig() {
+        const whitelist = flow(
+          map(trim),
+          reject(isEmpty),
+          filter(startsWith('http'))
+        )(this.get('whitelist'));
+
+        this.set({ busy: true });
+
+        chrome.storage.sync.set({
+          whitelist,
+        }, () => {
+          this.set({
+            whitelist,
+            busy: false,
+          });
+        });
+      },
+    },
+  }
+</script>
