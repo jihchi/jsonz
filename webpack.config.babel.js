@@ -21,12 +21,13 @@ export default {
     filename: '[name].bundle.js',
   },
   resolve: {
-    extensions: ['', '.js', '.css'],
+    extensions: ['', '.js', '.css', '.html'],
     root: ROOT,
   },
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
+      { test: /\.(html|js)$/, exclude: /node_modules/, loader: 'babel-loader' },
+      { test: /\.html$/, exclude: /node_modules/, loader: 'svelte-loader' },
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
     ],
   },
