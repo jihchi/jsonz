@@ -35,18 +35,18 @@
     "json-stringify-pretty-compact": "^1.0.2",
     "lodash": "^4.17.2",
     "select": "^1.1.0",
-    "svelte": "^1.2.0",
-    "svelte-loader": "^1.0.1",
+    "svelte": "^1.2.2",
+    "svelte-loader": "^1.1.0",
     "wildstring": "^1.0.8"
   },
   "devDependencies": {
-    "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.8",
-    "babel-preset-env": "0.0.9",
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-preset-env": "^1.0.0",
     "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.26.0",
+    "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.3"
+    "webpack": "^1.14.0"
   }
 }
