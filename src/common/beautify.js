@@ -1,6 +1,7 @@
 import $ from 'jquery';
+import startsWith from 'lodash/startsWith';
+import endsWith from 'lodash/endsWith';
 import hljs from 'highlight.js';
-import select from 'select';
 import stringify from 'json-stringify-pretty-compact';
 import debug from './debug';
 import injectCSS from './injectCSS';
@@ -21,7 +22,19 @@ function onMouseLeave() {
 }
 
 function onClick() {
-  select(this);
+  const selection = window.getSelection();
+  const range = document.createRange();
+  const node = this.childNodes[0];
+  const textContent = node.textContent;
+  const hasDoubleQuote = startsWith(textContent, '"') && endsWith(textContent, '"');
+  const startOffset = hasDoubleQuote ? 1 : 0;
+  const endOffset = hasDoubleQuote ? node.length - 1 : node.length;
+
+  range.setStart(node, startOffset);
+  range.setEnd(node, endOffset);
+
+  selection.removeAllRanges();
+  selection.addRange(range);
 }
 
 export default function beautify() {
