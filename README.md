@@ -24,6 +24,10 @@ Download via [Chrome Web Store](https://chrome.google.com/webstore/detail/jsonz/
 
 ## Change Log
 
+### 2.1.1 - 2016-12-15
+
+* **[Changed]** Don't select the double quote
+
 ### 2.1.0 - 2016-11-30
 
 * **[Added]** Add hovering style.
