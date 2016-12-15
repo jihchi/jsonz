@@ -1,6 +1,6 @@
 {
   "name": "jsonz",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Make JSON pretty and syntax highlight",
   "main": "index.js",
   "scripts": {
