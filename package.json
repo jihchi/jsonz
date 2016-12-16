@@ -4,7 +4,7 @@
   "description": "Make JSON pretty and syntax highlight",
   "main": "index.js",
   "scripts": {
-    "pack": "zip -rv9 packed.zip manifest.json bundled",
+    "pack": "zip -rv9 packed.zip manifest.json bundled icon_128.png",
     "precompile": "rm -rf bundled",
     "compile": "webpack --progress",
     "dist": "yarn run compile -- -p && yarn run pack",
