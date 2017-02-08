@@ -1,4 +1,6 @@
 # jsonz
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/jihchi/jsonz.svg)](https://greenkeeper.io/)
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ahendnlfikgofocdohpgaddkfjhbicnc.svg)](https://chrome.google.com/webstore/detail/jsonz/ahendnlfikgofocdohpgaddkfjhbicnc)
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/price/ahendnlfikgofocdohpgaddkfjhbicnc.svg)](https://chrome.google.com/webstore/detail/jsonz/ahendnlfikgofocdohpgaddkfjhbicnc)
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/rating/ahendnlfikgofocdohpgaddkfjhbicnc.svg)](https://chrome.google.com/webstore/detail/jsonz/ahendnlfikgofocdohpgaddkfjhbicnc)
