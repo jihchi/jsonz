@@ -33,19 +33,19 @@
     "highlight.js": "^9.9.0",
     "jquery": "^3.1.1",
     "json-stringify-pretty-compact": "^1.0.2",
-    "lodash": "^4.17.2",
-    "svelte": "^1.6.0",
-    "svelte-loader": "^1.1.0",
+    "lodash": "^4.17.4",
+    "svelte": "^1.6.8",
+    "svelte-loader": "^1.3.0",
     "wildstring": "^1.0.8"
   },
   "devDependencies": {
-    "babel-core": "^6.21.0",
-    "babel-loader": "^6.2.10",
-    "babel-preset-env": "^1.1.4",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.0",
+    "babel-preset-env": "^1.1.8",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "beta",
     "style-loader": "^0.13.1",
-    "webpack": "beta"
+    "webpack": "^2.2.1"
   }
 }
