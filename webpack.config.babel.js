@@ -23,14 +23,14 @@ export default {
   },
   module: {
     rules: [
-      { test: /\.(html|js)$/, exclude: /node_modules/, loader: 'babel-loader' },
-      { test: /\.html$/, exclude: /node_modules/, loader: 'svelte-loader' },
+      { test: /\.(svelte|js)$/, exclude: /node_modules/, loader: 'babel-loader' },
+      { test: /\.svelte$/, exclude: /node_modules/, loader: 'svelte-loader' },
       { test: /\.css$/, loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader' }) },
     ],
   },
   devtool: DEV ? 'cheap-module-eval-source-map' : 'source-map',
   resolve: {
-    extensions: ['.js', '.css', '.html'],
+    extensions: ['.js', '.css', '.svelte'],
     alias: {
       src: path.join(ROOT, 'src'),
     },
