@@ -1,11 +1,16 @@
 import webpack from 'webpack';
 import path from 'path';
+import { readFileSync } from 'fs';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 const ROOT = path.resolve(__dirname);
 const bundledPath = path.join(ROOT, 'bundled');
 const DEV = process.env.NODE_ENV !== 'production';
+const babelrc = JSON.parse(readFileSync('.babelrc'));
+
+babelrc.babelrc = false;
+babelrc.presets[0][1].modules = false;
 
 export default {
   entry: {
@@ -23,9 +28,27 @@ export default {
   },
   module: {
     rules: [
-      { test: /\.(svelte|js)$/, exclude: /node_modules/, use: 'babel-loader' },
-      { test: /\.svelte$/, exclude: /node_modules/, use: 'svelte-loader' },
-      { test: /\.css$/, use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' }) },
+      {
+        test: /\.(svelte|js)$/,
+        exclude: /node_modules/,
+        use: [
+          { loader: 'babel-loader', query: babelrc },
+        ],
+      },
+      {
+        test: /\.svelte$/,
+        exclude: /node_modules/,
+        use: [
+          { loader: 'svelte-loader' },
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader',
+        }),
+      },
     ],
   },
   devtool: DEV ? 'cheap-module-eval-source-map' : 'source-map',
