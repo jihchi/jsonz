@@ -23,9 +23,9 @@ export default {
   },
   module: {
     rules: [
-      { test: /\.(svelte|js)$/, exclude: /node_modules/, loader: 'babel-loader' },
-      { test: /\.svelte$/, exclude: /node_modules/, loader: 'svelte-loader' },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader' }) },
+      { test: /\.(svelte|js)$/, exclude: /node_modules/, use: 'babel-loader' },
+      { test: /\.svelte$/, exclude: /node_modules/, use: 'svelte-loader' },
+      { test: /\.css$/, use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' }) },
     ],
   },
   devtool: DEV ? 'cheap-module-eval-source-map' : 'source-map',
