@@ -40,7 +40,7 @@
     computed: {
       whitelistText: whitelist => whitelist.join('\n'),
     },
-    onrender() {
+    oncreate() {
       chrome.storage.sync.get({
         whitelist: [],
       }, ({ whitelist }) => {
