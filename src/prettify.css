@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('~highlight.js/styles/monokai-sublime.css');
+
+body {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+body * {
+  font-family: 'Inconsolata', monospace !important;
+}

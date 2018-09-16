@@ -3,6 +3,7 @@
   "version": "3.0.0",
   "description": "Make JSON pretty and syntax highlight",
   "scripts": {
+    "build": "yarn bundler --mode production",
     "bundler": "webpack --config webpack.config.js",
     "start": "yarn bundler --watch --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
