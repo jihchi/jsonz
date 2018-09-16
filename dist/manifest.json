@@ -1,0 +1,21 @@
+{
+  "name": "jsonz",
+  "version": "3.0.0",
+  "manifest_version": 2,
+  "author": "Jih-Chi Lee <achi@987.tw>",
+  "description": "Make JSON pretty and syntax highlight",
+  "homepage_url": "https://github.com/jihchi/jsonz",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": ["src/background.js"],
+    "persistent": true
+  },
+  "options_page": "src/options.html",
+  "browser_action": {
+    "default_title": "Pretty and syntax highlight"
+  },
+  "permissions": ["activeTab"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

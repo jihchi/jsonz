@@ -1,8 +1,2 @@
-node_modules
-temp
-.tmp
 .DS_Store
-bundled
-*.zip
-*.log
-*.swp
+dist/src/*.js
