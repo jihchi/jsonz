@@ -2,15 +2,14 @@
   "name": "jsonz",
   "version": "3.0.0",
   "description": "Make JSON pretty and syntax highlight",
-  "scripts": {
-    "build": "yarn bundler --mode production",
-    "bundler": "webpack --config webpack.config.js",
-    "start": "yarn bundler --watch --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "author": "Jih-Chi Lee <achi@987.tw>",
+  "homepage": "https://github.com/jihchi/jsonz#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jihchi/jsonz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jihchi/jsonz/issues"
   },
   "keywords": [
     "chrome",
@@ -20,12 +19,12 @@
     "syntax highlight",
     "formatter"
   ],
-  "author": "Jih-Chi Lee <achi@987.tw>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jihchi/jsonz/issues"
+  "scripts": {
+    "build": "yarn bundler --mode production",
+    "bundler": "webpack --config webpack.config.js",
+    "start": "yarn bundler --watch --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/jihchi/jsonz#readme",
   "dependencies": {
     "highlight.js": "^9.12.0",
     "prettier": "^1.14.2"
@@ -46,5 +45,6 @@
     "production": [
       "last 2 chrome versions"
     ]
-  }
+  },
+  "license": "MIT"
 }
